@@ -5,15 +5,15 @@ _A Windows command line tool that scans your Picasa photo folders and generates 
 >Looking to showcase your starred portraits? Use StarCasa to list them, then feed that list into [SideBySide](https://github.com/mrsilver76/sidebyside) to combine pairs into perfect landscape shots - ideal for digital photo frames that hate vertical images.
 
 ## 🧰 Features
-- ⭐ Detects and lists starred photos from Picasa `.picasa.ini` files
-- 🖼️ Classifies images by orientation: portrait, landscape, square
-- 📁 Recursively scans multiple input directories
-- 🚫 Automatically ignores `.picasaoriginals` folders
-- 📝 Outputs results to customizable text files per orientation
-- 📂 Supports single combined output file with `--all` option
-- ⚡ Uses fast native Windows image APIs for orientation detection
+- ⭐ Detects and lists starred photos from Picasa `.picasa.ini` files.
+- 🖼️ Classifies images by orientation: _portrait_, _landscape_ or _square_.
+- 📁 Recursively scans multiple input directories.
+- 🚫 Automatically ignores `.picasaoriginals` folders.
+- 📝 Outputs results to customizable text files per orientation.
+- 📂 Supports single combined output file with `--all` option.
+- ⚡ Uses fast native Windows image APIs for orientation detection.
 - ✅ Optional file existence checking before reporting (`--check`)
-- 📊 Logs summary of files found and written per orientation
+- 📊 Generates logs to aid in troubleshooting.
 
 ## 📦 Download
 
@@ -33,8 +33,8 @@ StarCasa.exe "D:\Photos" -a "D:\Exports\all-starred.txt" -c
 StarCasa.exe "D:\Photos" --all "D:\Exports\all-starred.txt" --check
 ```
 - Look at all photos in `D:\Photos`
-- Export all starred images to `D:\Exports\all-starred.txt`
-- Skip checking if the files exist
+- Report all starred images to `D:\Exports\all-starred.txt`
+- Check if all the starred photos in `.picasa.ini` actually exist
 
 ```
 StarCasa.exe "D:\Photos" "E:\Pictures" -p "D:\Exports\portrait.txt" -l "D:\Exports\landscape.txt"
@@ -42,8 +42,8 @@ StarCasa.exe "D:\Photos" "E:\Pictures" -p "D:\Exports\portrait.txt" -l "D:\Expor
 StarCasa.exe "D:\Photos" "E:\Pictures" --portrait "D:\Exports\portrait.txt" --landscape "D:\Exports\landscape.txt"
 ```
 - Look at all photos in `D:\Photos` and `E:\Pictures`
-- Export portrait starred images to `D:\Exports\portrait.txt`
-- Export landscape starred images to `D:\Exports\landscape.txt`
+- Report portrait starred images to `D:\Exports\portrait.txt`
+- Report landscape starred images to `D:\Exports\landscape.txt`
 
 ```
 StarCasa.exe "D:\Photos" -l "D:\Exports\landscape-and-square.txt" -s "D:\Exports\landscape-and-square.txt"
@@ -51,7 +51,7 @@ StarCasa.exe "D:\Photos" -l "D:\Exports\landscape-and-square.txt" -s "D:\Exports
 StarCasa.exe "D:\Photos" --landscape "D:\Exports\landscape-and-square.txt" --square "D:\Exports\landscape-and-square.txt"
 ```
 - Look at all photos in `D:\Photos`
-- Export both portrait and square images to `D:\Exports\landscape-and-square.txt`
+- Report both portrait and square images to `D:\Exports\landscape-and-square.txt`
 
 ## 💻 Command line options
 
@@ -72,10 +72,10 @@ StarCasa.exe <inputDir1> [<inputDir2> ...] [options]
   Output a list of starred square images to `<file>`
 
 - **`/a <file>`, `-a <file>`, `--all <file>`**   
-  Output a list of all starred images to `<file>`
+  Output a list of all starred images to `<file>`. You cannot use this option with `--landscape`, `--portrait` and `--square`.
 
 - **`/c`, `-c`, `--check`**   
-  Only include images that physically exist on disk. This will slow down scanning.
+  Checks that each starred file listed in `.picasa.ini` actually exists on disk before including it. This will slow down scanning.
 
 - **`/?`, `-h`, `--help`**  
   Displays the full help text with all available options, credits and the location of the log files.
