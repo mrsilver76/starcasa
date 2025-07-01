@@ -1,0 +1,38 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <UseWindowsForms>true</UseWindowsForms> <!-- Enables GDI+ access -->
+    <PlatformTarget>x64</PlatformTarget>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+
+	  <!-- Assembly information -->
+	  <ApplicationIcon>StarCasa.ico</ApplicationIcon>
+	  <Authors>Richard Lawrence</Authors>
+	  <Product>StarCasa</Product>
+	  <Description>Generate a report of starred photos in Picasa</Description>
+	  <AssemblyTitle>Generate a report of starred photos in Picasa</AssemblyTitle>
+	  <PackageProjectUrl>https://github.com/mrsilver76/starcasa</PackageProjectUrl>
+	  <RepositoryUrl>https://github.com/mrsilver76/starcasa</RepositoryUrl>
+	  <Copyright>Copyright © 2025 Richard Lawrence</Copyright>
+	  <GenerateAssemblyInfo>true</GenerateAssemblyInfo>
+
+	  <!-- Version information -->
+	  <!-- Remember major.minor.BUILD.revision! -->
+	  <Version>1.0.0.0</Version>
+	  <FileVersion>1.0.0.0</FileVersion>
+	  <AssemblyVersion>1.0.0.0</AssemblyVersion>
+  </PropertyGroup>
+
+	<ItemGroup>
+		<Content Include="StarCasa.ico" />
+	</ItemGroup>
+	
+  <ItemGroup>
+    <PackageReference Include="ini-parser" Version="2.5.2" />
+    <PackageReference Include="System.Drawing.Common" Version="9.0.6" />
+  </ItemGroup>
+
+</Project>
