@@ -95,5 +95,5 @@ StarCasa currently meets the needs it was designed for, and no major new feature
 
 ## Version history
 
-### 1.0.0 (xx June 2025)
+### 1.0.0 (01 July 2025)
 - 🏁 Initial release. Declared as stable.
