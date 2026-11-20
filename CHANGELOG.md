@@ -2,7 +2,7 @@
 
 All notable changes to StarCasa are listed here, newest first.
 
-## 1.1.0 (xx November 2026)
+## 1.1.0 (20 November 2026)
 
 - StarCasa now requires the .NET 10 Runtime, as support for .NET 8 ended on 10th November 2026.
 - Significant changes have been made to the way scanning is performed. This can be up to 4x faster than previously.
