@@ -1,4 +1,4 @@
-# StarCasa
+# <img src="https://raw.githubusercontent.com/mrsilver76/starcasa/refs/heads/main/StarCasa/StarCasa.ico" width="48" height="48"> StarCasa
 _A Windows command line tool that scans your Picasa photo folders and generates one or more plain text lists of your starred images, filtered by orientation (portrait, landscape, or square)_
 
 >[!TIP]
